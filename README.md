@@ -104,6 +104,7 @@ Quanto ao deploy, esta action utiliza workflows compartihados e assim como as va
 * Implementação de testes de forma mais elaborada levando em consideração outros cenários
 * Configuração e aplicação de linter a fim de satisfazer os padrões do projeto
 * Migrar armazenamento em memória para banco de dados
+* Incrementar documentação do swagger
 
 # Pricipais Tecnologias Utilizadas
 

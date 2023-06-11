@@ -100,10 +100,10 @@ Quanto ao deploy, esta action utiliza workflows compartihados e assim como as va
 
 # Melhorias Necessárias
 
-* Integração com ferramentas de log
-* Implementação de testes de forma mais elaborada
-* Configuração e aplicação de linter de forma que satisfaça a equipe
-* Migrar armazenamento para banco de dados
+* Integração com ferramentas de log e monitoramento, tais como: Sentry, Prometheus e Grafana
+* Implementação de testes de forma mais elaborada levando em consideração outros cenários
+* Configuração e aplicação de linter a fim de satisfazer os padrões do projeto
+* Migrar armazenamento em memória para banco de dados
 
 # Pricipais Tecnologias Utilizadas
 

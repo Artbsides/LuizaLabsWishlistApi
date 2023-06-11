@@ -28,7 +28,7 @@ Após certificar-se de que as dependências estejam instaladas na máquina que i
 
 É recomendado o uso dos comandos `Makefile` para aqueles que desejarem rodar a aplicão completamente dockerizada, neste cenário, não se faz necessária a instalação das dependências para exeução em máquina local.
 
-* Caso ocorra algum problema relacionado a permissão durante a execução de algum comando do package.json ou Makefile, talvez seja necessário excluir os diretórios `dist` e `node_modules`.
+* Caso ocorra algum problema relacionado a permissão durante a execução de algum comando do package.json ou Makefile, talvez seja necessário excluir os diretórios `dist` e `node_modules` e reinstalar os pacotes.
 
 # Makefile
 
@@ -82,13 +82,19 @@ Em ambientes externos voltados a staging e production, as variáveis de ambiente
 
 Para encriptar e/ou desencripar as variáveis de ambiente de staging e production é necessario que o ambiente de infra esteja devidadamente alinhado com esta aplicação, porém, de acordo com o objetivo desta aplicação, este recurso não se faz necessário e não será devidamente documentado neste repositório, ainda assim, caso seja de interesse das partes, notifique-me para a demonstração de uso.
 
-# Autorização e Autenticação
+# Autorização
 
-A api está configurada para ser acessível apenas por `clientes` (interfaces, aplicações integradas e afins) que possuam chaves de api previamente configuradas, da mesma forma que, é necessário estar logado como usuário previamente cadastrado para ter acesso aos recursos implementados.
+A aplicação está configurada para ser acessível apenas por `clientes` (interfaces, aplicações integradas e afins) que possuam chaves de api previamente configuradas.
 
 As chaves de api devem ser setadas na variável de ambiente `API_KEYS`. Não há formato definido para tal, porém, as chaves devem ser separadas por vírgula e futuramente poderão ser usadas para identificar os `clientes` que as estão utilizando.
 
-Quanto à autenticação, basta setar a variável de ambiente `JWT_SECRET` para que a aplicação possa gerar os tokens de acesso para usuários que realizarem o login na aplicação. Neste caso também não há formato definido, porém, em ambos os casos recomenda-se a utilização de hashes de 32 bits ou semelhantes.
+* Para todas as requests feitas para esta aplicação o header `ApiKey` deve ser enviado setado com uma das chaves de api previamente configuradas.
+
+# Autenticação
+
+Assim como a autorização fornece certo nível de segurança ao acesso da aplicação, é necessário estar logado como usuário previamente cadastrado para ter acesso aos recursos implementados.
+
+Certifique-se de atribuir valor à variável de ambiente `JWT_SECRET` para que a aplicação possa gerar os tokens de acesso para usuários que realizarem login. Neste caso também não há formato definido, porém, em ambos os casos recomenda-se a utilização de hashes de 32 bits ou semelhantes.
 
 # Workflows
 

@@ -1,4 +1,4 @@
-FROM node:20.1.0-alpine As development
+FROM node:19.7.0-alpine As development
 
 WORKDIR /wishlist-api
 
@@ -9,7 +9,7 @@ RUN npm ci
 
 COPY . .
 
-FROM node:20.1.0-alpine As build
+FROM node:19.7.0-alpine As build
 
 WORKDIR /wishlist-api
 
@@ -17,14 +17,14 @@ COPY package*.json ./
 COPY --from=development /wishlist-api/node_modules ./node_modules
 COPY . .
 
-ENV NODE_ENV ${NODE_ENV}
+ENV NODE_ENV production
 
 RUN npm run build
 RUN npm ci --only=production
 
 RUN npm cache clean --force
 
-FROM node:20.1.0-alpine As production
+FROM node:19.7.0-alpine As production
 
 COPY --from=build /wishlist-api/node_modules ./node_modules
 COPY --from=build /wishlist-api/dist ./dist

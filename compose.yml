@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      NODE_ENV: ${NODE_ENV}
+      NODE_ENV: production
       NODE_PORT: ${NODE_PORT}
       NODE_HOST: ${NODE_HOST}
       API_KEYS: ${API_KEYS}

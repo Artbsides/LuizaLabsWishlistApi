@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: wishlist-api-service
+  namespace: staging-apps
+spec:
+  selector:
+    app: wishlist-api
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 8081
+      protocol: TCP
+      targetPort: 3000

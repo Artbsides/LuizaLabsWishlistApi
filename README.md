@@ -1,1 +1,1 @@
-# LuizaLabsWishlistApi
+# WishlistApi

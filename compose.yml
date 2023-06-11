@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  wishlist-api:
+    image: wishlist-api:latest
+    container_name: wishlist-api
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      NODE_PORT: ${NODE_PORT}
+      NODE_HOST: ${NODE_HOST}
+      API_KEYS: ${API_KEYS}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ALGORITHM: ${JWT_ALGORITHM}
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}

@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  wishlist-api:
+    image: wishlist-api:development
+    command: ${COMPOSE_DEVELOPMENT_COMMAND:-}
+    build:
+      target: development
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}
+      - ${NODE_PORT_DEBUG}:${NODE_PORT_DEBUG}
+    volumes:
+        - .:/wishlist-api
+        - ./node_modules:/wishlist-api/node_modules

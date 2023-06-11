@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 
 export const products: Record<string, any> = {
-  data: Array.from({ length: 200 }, i => {
+  data: Array.from({ length: 200 }, _ => {
     return {
       id: faker.string.uuid(),
       title: faker.commerce.productName(),

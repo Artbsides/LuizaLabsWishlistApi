@@ -51,7 +51,7 @@ Para a construção das imagens, aplique o comando abaixo:
 $ make build
 ```
 
-Em alguns casos, pode-se fazer necessária a instalar das dependências do projeto aplicando o comando abaixo:
+Em alguns casos pode-se fazer necessária a instalação das dependências do projeto aplicando o comando abaixo:
 
 ```
 $ make packages
@@ -70,7 +70,7 @@ Por fim, para inicializar a aplicação basta aplicar o seguinte comando:
 $ make start mode=dev|debug|prod
 ```
 
-Caso corra tudo conforme o esperado, a aplicação estará disponível na seguinte url http://localhost:3000.
+Caso corra tudo conforme o esperado a aplicação estará disponível na seguinte url http://localhost:3000.
 
 # Variáveis de Ambiente
 
@@ -104,9 +104,9 @@ Com exceção das requests feitas para as urls dos produtos, assim como também,
 
 Foram implementadas actions que são executadas em diferentes cenários com o objetivo de aplicar testes e análise de código, assim como também o deploy da aplicação.
 
-Para que as actions relacionadas aos testes e análise de código sejam executadas, basta a realização do push para a branch na qual está recebendo modificações, caso as actions identifiquem problemas, o merge da branch junto a branch main não será permitido.
+Para que as actions relacionadas aos testes e análise de código sejam executadas, basta a realização do push para a branch na qual está recebendo modificações, caso as actions identifiquem problemas, o merge da branch junto a main não será permitido.
 
-Quanto ao deploy, esta action utiliza workflows compartihados e assim como as variáveis de ambiente encriptadas e demais recursos de deploy, é necessário estar alinhado com o ambiente de infra, porém, a nível de explicação, para execução da action, basta criar tags em formato preestabelecido e o processo inicializará automaticamente.
+Quanto ao deploy, esta action utiliza workflows compartihados e assim como as variáveis de ambiente encriptadas e demais recursos de deploy, é necessário estar alinhado com o ambiente de infra, porém, a nível de explicação, para execução da action basta criar tags em formato preestabelecido e o processo inicializará automaticamente.
 
 # Documentação
 

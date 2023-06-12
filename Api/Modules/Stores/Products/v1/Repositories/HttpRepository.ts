@@ -13,14 +13,14 @@ export class ProductsHttpRepository {
 
   async retrieve(query: RetrieveDto): Promise<ProductPaginated> {
     const response = await this.requestsService
-      .get(`?page=${query.page}`);
+      .get<ProductPaginated>(`?page=${query.page}`);
 
     return response.data;
   }
 
   async retrieveBy(params: RetrieveByDto): Promise<Product> {
     const response = await this.requestsService
-      .get(`${params.id}/`);
+      .get<Product>(`${params.id}/`);
 
     return response.data;
   }

@@ -18,14 +18,14 @@ export class AccountsService {
   ) {}
 
   async create(data: CreateDto): Promise<Authentication> {
-    const account = await this.inMemoryRepository
+    const account = this.inMemoryRepository
       .create(data);
 
     return await this.authService.authenticate({ id: account.id }, account);
   }
 
-  async retrieveBy(user: AccountPartial): Promise<Account> {
-    const account = await this.inMemoryRepository
+  retrieveBy(user: AccountPartial): Account {
+    const account = this.inMemoryRepository
       .retrieveBy(user);
 
     if (!account)
@@ -35,13 +35,13 @@ export class AccountsService {
   }
 
   async updateBy(user: AccountPartial, data: UpdateByDto): Promise<Authentication> {
-    const account = await this.inMemoryRepository
+    const account = this.inMemoryRepository
       .updateBy(user, data);
 
     return await this.authService.authenticate({ id: account.id }, account);
   }
 
-  async deleteBy(user: AccountPartial): Promise<void> {
-    await this.inMemoryRepository.deleteBy(user);
+  deleteBy(user: AccountPartial): void {
+    this.inMemoryRepository.deleteBy(user);
   }
 }

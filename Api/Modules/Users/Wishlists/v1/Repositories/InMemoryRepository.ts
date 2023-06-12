@@ -11,7 +11,7 @@ import { AccountPartial } from "Api/Modules/Users/Accounts/v1/Models/AccountPart
 export class WishlistsInMemoryRepository {
   protected wishlist: Wishlist[] = [];
 
-  async create(user: AccountPartial, data: Product): Promise<Wishlist> {
+  create(user: AccountPartial, data: Product): Wishlist {
     const product: Wishlist = { id: randomUUID(),
       user: {
         id: user.id as string
@@ -22,21 +22,21 @@ export class WishlistsInMemoryRepository {
     return this.wishlist.push(product), product;
   }
 
-  async retrieve(user: AccountPartial, query: RetrieveDto): Promise<Wishlist[]> {
+  retrieve(user: AccountPartial, query: RetrieveDto): Wishlist[] {
     const products = this.wishlist
       .filter(product => product.user.id == user.id);
 
     return products?.slice((Number(query.page) - 1) * 2, Number(query.page) * 2) ?? [];
   }
 
-  async retrieveBy(user: AccountPartial, data: Product): Promise<Wishlist|undefined> {
+  retrieveBy(user: AccountPartial, data: Product): Wishlist | undefined {
     const wishlist = this.wishlist
       .find(product => product.product.id == data.id && product.user.id == user.id);
 
     return wishlist;
   }
 
-  async deleteBy(user: AccountPartial, params: DeleteByDto): Promise<void> {
+  deleteBy(user: AccountPartial, params: DeleteByDto): void {
     const product = this.wishlist
       .findIndex(product => product.id == params.id && product.user.id == user.id);
 

@@ -27,7 +27,7 @@ jobs:
 
       - name: Tests
         run: |
-          npm run tests:cov
+          npm run tests:coverage
 
   CodeConvention:
     runs-on: ubuntu-22.04

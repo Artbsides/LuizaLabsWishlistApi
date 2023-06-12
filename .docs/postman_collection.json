@@ -1,0 +1,4122 @@
+{
+	"info": {
+		"_postman_id": "8baf2e66-521c-4b7d-a0af-ded679156f91",
+		"name": "WishlistApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4274276"
+	},
+	"item": [
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "/store/products?page=1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/store/products?page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"store",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /store/products?page=1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3000/store/products?page=1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"store",
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:12:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /store/products?page=1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products?page=1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:13:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[200] | /store/products?page=1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products?page=1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "20003"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:13:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n            \"title\": \"Cadeira para Auto Iseos Bébé Confort Earth Brown\",\n            \"price\": 1699,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1bf0f365-fbdd-4e21-9786-da459d78dd1f.jpg\"\n        },\n        {\n            \"id\": \"958ec015-cfcf-258d-c6df-1721de0ab6ea\",\n            \"title\": \"Moisés Dorel Windoo 1529\",\n            \"price\": 1149,\n            \"image\": \"http://challenge-api.luizalabs.com/images/958ec015-cfcf-258d-c6df-1721de0ab6ea.jpg\"\n        },\n        {\n            \"id\": \"6a512e6c-6627-d286-5d18-583558359ab6\",\n            \"title\": \"Moisés Dorel Windoo 1529\",\n            \"price\": 1149,\n            \"image\": \"http://challenge-api.luizalabs.com/images/6a512e6c-6627-d286-5d18-583558359ab6.jpg\"\n        },\n        {\n            \"id\": \"4bd442b1-4a7d-2475-be97-a7b22a08a024\",\n            \"title\": \"Cadeira para Auto Axiss Bébé Confort Robin Red\",\n            \"price\": 1999,\n            \"image\": \"http://challenge-api.luizalabs.com/images/4bd442b1-4a7d-2475-be97-a7b22a08a024.jpg\"\n        },\n        {\n            \"id\": \"77be5ad3-fa87-d8a0-9433-5dbcc3152fac\",\n            \"title\": \"Farol Lado Esquerdo para Monza 88/90\",\n            \"price\": 160.69,\n            \"image\": \"http://challenge-api.luizalabs.com/images/77be5ad3-fa87-d8a0-9433-5dbcc3152fac.jpg\"\n        },\n        {\n            \"id\": \"356eafd9-224a-d242-a3f2-e29b4270a927\",\n            \"title\": \"Cadeira para Auto Bébé Confort\",\n            \"price\": 1999,\n            \"image\": \"http://challenge-api.luizalabs.com/images/356eafd9-224a-d242-a3f2-e29b4270a927.jpg\"\n        },\n        {\n            \"id\": \"212d0f07-8f56-0708-971c-41ee78aadf2b\",\n            \"title\": \"The Walking Dead - Game of the Year Edition\",\n            \"price\": 149.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/212d0f07-8f56-0708-971c-41ee78aadf2b.jpg\"\n        },\n        {\n            \"id\": \"2b505fab-d865-e164-345d-efbd4c2045b6\",\n            \"title\": \"Guitarra Original Ibanez DN 520K\",\n            \"price\": 6309.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/2b505fab-d865-e164-345d-efbd4c2045b6.jpg\"\n        },\n        {\n            \"id\": \"ee9fc710-8876-c40c-7862-275e237d84a4\",\n            \"title\": \"The Walking Dead - Game of the Year Edition\",\n            \"price\": 149.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/ee9fc710-8876-c40c-7862-275e237d84a4.jpg\"\n        },\n        {\n            \"id\": \"432c3f2a-bcae-e709-4ad6-4ea71f4aa4f7\",\n            \"title\": \"Farol Automotivo Lado Esquedo para Escort/Verona\",\n            \"price\": 136.3,\n            \"image\": \"http://challenge-api.luizalabs.com/images/432c3f2a-bcae-e709-4ad6-4ea71f4aa4f7.jpg\"\n        },\n        {\n            \"id\": \"eaefc867-10a6-3a5e-947d-43a984964fcf\",\n            \"title\": \"Jogo de Cama / Lençol Solteiro Percal 200 Sophia\",\n            \"price\": 241.55,\n            \"image\": \"http://challenge-api.luizalabs.com/images/eaefc867-10a6-3a5e-947d-43a984964fcf.jpg\"\n        },\n        {\n            \"id\": \"e9a72482-7e95-44ff-ea5a-75147aef2184\",\n            \"title\": \"Guitarra Telecaster Fender Standard\",\n            \"price\": 7999.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/e9a72482-7e95-44ff-ea5a-75147aef2184.jpg\"\n        },\n        {\n            \"id\": \"1bcd1b21-7205-4f02-227f-4c8c9e845ade\",\n            \"title\": \"Farol Automotivo Lado Direito para Corsa 94 a 2000\",\n            \"price\": 147.19,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1bcd1b21-7205-4f02-227f-4c8c9e845ade.jpg\"\n        },\n        {\n            \"id\": \"1c95d400-9847-eda3-de07-0e62d80a30c6\",\n            \"title\": \"Guitarra Strato Fender Amercian Special HSS\",\n            \"price\": 12719.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1c95d400-9847-eda3-de07-0e62d80a30c6.jpg\"\n        },\n        {\n            \"id\": \"a0e4aa47-b17c-f266-f4d6-aba26ec085aa\",\n            \"title\": \"Bonecos Família dos Cães Sylvanian Families\",\n            \"price\": 82.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/a0e4aa47-b17c-f266-f4d6-aba26ec085aa.jpg\"\n        },\n        {\n            \"id\": \"f4e98457-f750-d6e4-d274-f3d605ebf590\",\n            \"title\": \"Farol Automotivo Lado Esquedo para Corsa 94 a 2000\",\n            \"price\": 147.19,\n            \"image\": \"http://challenge-api.luizalabs.com/images/f4e98457-f750-d6e4-d274-f3d605ebf590.jpg\"\n        },\n        {\n            \"id\": \"dce33cfd-ccb1-c972-da0e-eddefcd1346b\",\n            \"title\": \"Arno Sorel Solinote Mûre\",\n            \"price\": 64.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/dce33cfd-ccb1-c972-da0e-eddefcd1346b.jpg\"\n        },\n        {\n            \"id\": \"ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8\",\n            \"title\": \"Sylvanian Families Bebê Ovelha com Triciclo\",\n            \"price\": 24.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8.jpg\"\n        },\n        {\n            \"id\": \"d6d9ab20-ef42-bab5-9b6e-6dc90d981472\",\n            \"title\": \"Taça para Champanhe/Vinho 1 Peça\",\n            \"price\": 37.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/d6d9ab20-ef42-bab5-9b6e-6dc90d981472.jpg\"\n        },\n        {\n            \"id\": \"571fa8cc-2ee7-5ab4-b388-06d55fd8ab2f\",\n            \"title\": \"Churrasqueira Elétrica Mondial 1800W\",\n            \"price\": 159,\n            \"image\": \"http://challenge-api.luizalabs.com/images/571fa8cc-2ee7-5ab4-b388-06d55fd8ab2f.jpg\",\n            \"review\": \"4.352941\"\n        },\n        {\n            \"id\": \"f6c094e1-f27d-677b-4187-cf6a5acd03aa\",\n            \"title\": \"Taça para Vinho 1 Peça\",\n            \"price\": 39,\n            \"image\": \"http://challenge-api.luizalabs.com/images/f6c094e1-f27d-677b-4187-cf6a5acd03aa.jpg\"\n        },\n        {\n            \"id\": \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\",\n            \"title\": \"Salvatore Ferragamo Emozione Perfume Feminino\",\n            \"price\": 545,\n            \"image\": \"http://challenge-api.luizalabs.com/images/dbaa0b7d-ddab-8bef-4715-bab2c42b5446.jpg\"\n        },\n        {\n            \"id\": \"2fed4df3-5f11-c6a3-ac69-f9a408f2eff7\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/2fed4df3-5f11-c6a3-ac69-f9a408f2eff7.jpg\"\n        },\n        {\n            \"id\": \"c60ba2af-6b1c-f932-8dd3-42a7d17a54db\",\n            \"title\": \"Salvatore Ferragamo Emozione Perfume Feminino\",\n            \"price\": 391,\n            \"image\": \"http://challenge-api.luizalabs.com/images/c60ba2af-6b1c-f932-8dd3-42a7d17a54db.jpg\"\n        },\n        {\n            \"id\": \"7be7243b-e938-fe5d-a71e-905fd7a9fbba\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/7be7243b-e938-fe5d-a71e-905fd7a9fbba.jpg\"\n        },\n        {\n            \"id\": \"9175d13b-52c6-f14c-05d1-f70f12e908b5\",\n            \"title\": \"Taça para Vinho 1 Peça\",\n            \"price\": 33.53,\n            \"image\": \"http://challenge-api.luizalabs.com/images/9175d13b-52c6-f14c-05d1-f70f12e908b5.jpg\"\n        },\n        {\n            \"id\": \"9896cdf5-4e97-d245-8fa4-d7c9e4c773df\",\n            \"title\": \"Taça para Champanhe 1 Peça\",\n            \"price\": 33.53,\n            \"image\": \"http://challenge-api.luizalabs.com/images/9896cdf5-4e97-d245-8fa4-d7c9e4c773df.jpg\"\n        },\n        {\n            \"id\": \"1b3780e9-6fe4-8070-e485-9c28099b610b\",\n            \"title\": \"Sylvanian Families Bebê Coelho com Berço\",\n            \"price\": 24.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1b3780e9-6fe4-8070-e485-9c28099b610b.jpg\"\n        },\n        {\n            \"id\": \"c5af1ede-b5e2-44a6-a9b5-2869fe58d82b\",\n            \"title\": \"Taça para Vinho 1 Peça\",\n            \"price\": 33.53,\n            \"image\": \"http://challenge-api.luizalabs.com/images/c5af1ede-b5e2-44a6-a9b5-2869fe58d82b.jpg\"\n        },\n        {\n            \"id\": \"349b1945-f229-ad4b-3e5e-41496fc3eb39\",\n            \"title\": \"Bonecos Família dos Coelhos Sylvanian Families\",\n            \"price\": 82.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/349b1945-f229-ad4b-3e5e-41496fc3eb39.jpg\"\n        },\n        {\n            \"id\": \"85a09a9e-d1f2-1221-fecb-a850cc4a3a72\",\n            \"title\": \"Taça para Vinho 1 Peça\",\n            \"price\": 33.53,\n            \"image\": \"http://challenge-api.luizalabs.com/images/85a09a9e-d1f2-1221-fecb-a850cc4a3a72.jpg\"\n        },\n        {\n            \"id\": \"9415a64a-912d-39f2-b72e-223f0bfbf821\",\n            \"title\": \"Narciso Rodriguez For Her L?absolu\",\n            \"price\": 618,\n            \"image\": \"http://challenge-api.luizalabs.com/images/9415a64a-912d-39f2-b72e-223f0bfbf821.jpg\"\n        },\n        {\n            \"id\": \"b452881e-6763-a3e7-1acd-59e6671326a1\",\n            \"title\": \"The Wolf Among Us para PS4\",\n            \"price\": 149.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/b452881e-6763-a3e7-1acd-59e6671326a1.jpg\"\n        },\n        {\n            \"id\": \"df22bfd5-7a47-0aaa-d28d-125d528318b4\",\n            \"title\": \"Dolce & Gabbana Dolce Floral Drops\",\n            \"price\": 409,\n            \"image\": \"http://challenge-api.luizalabs.com/images/df22bfd5-7a47-0aaa-d28d-125d528318b4.jpg\"\n        },\n        {\n            \"id\": \"761b4399-343c-955f-3296-911185441597\",\n            \"title\": \"The Wolf Among Us para Xbox One\",\n            \"price\": 149.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/761b4399-343c-955f-3296-911185441597.jpg\"\n        },\n        {\n            \"id\": \"14a36c8b-5165-b77d-a37e-e363b552fd1c\",\n            \"title\": \"Alaïa Paris Perfume Feminino\",\n            \"price\": 929,\n            \"image\": \"http://challenge-api.luizalabs.com/images/14a36c8b-5165-b77d-a37e-e363b552fd1c.jpg\"\n        },\n        {\n            \"id\": \"de8e9b36-f9cf-ce4e-8e4b-465fdc821bc9\",\n            \"title\": \"Tampa em Silicone\",\n            \"price\": 19.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/de8e9b36-f9cf-ce4e-8e4b-465fdc821bc9.jpg\"\n        },\n        {\n            \"id\": \"877e290f-a333-2d64-1be6-bed0ee3bea57\",\n            \"title\": \"Alaïa Paris Perfume Feminino\",\n            \"price\": 719,\n            \"image\": \"http://challenge-api.luizalabs.com/images/877e290f-a333-2d64-1be6-bed0ee3bea57.jpg\"\n        },\n        {\n            \"id\": \"faee40cb-7481-2805-da9c-1baaee309ec1\",\n            \"title\": \"Alaïa Paris Perfume Feminino\",\n            \"price\": 489,\n            \"image\": \"http://challenge-api.luizalabs.com/images/faee40cb-7481-2805-da9c-1baaee309ec1.jpg\"\n        },\n        {\n            \"id\": \"5280f39e-a189-115e-bd49-b4633b971911\",\n            \"title\": \"Edredom Queen Size 150 Fios 1 Peça\",\n            \"price\": 248.13,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5280f39e-a189-115e-bd49-b4633b971911.jpg\"\n        },\n        {\n            \"id\": \"1ac17155-2166-1d0e-02dc-ffaeb4f92d75\",\n            \"title\": \"Desodorante Masculino Scuderia Déodorant 150ml\",\n            \"price\": 89.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1ac17155-2166-1d0e-02dc-ffaeb4f92d75.jpg\"\n        },\n        {\n            \"id\": \"b66897ea-4f5a-b8a9-dc7b-3011f37a18fc\",\n            \"title\": \"Narciso Rodriguez For Her L?absolu\",\n            \"price\": 805,\n            \"image\": \"http://challenge-api.luizalabs.com/images/b66897ea-4f5a-b8a9-dc7b-3011f37a18fc.jpg\"\n        },\n        {\n            \"id\": \"5b454a11-f269-f72b-a01e-25bf1111b750\",\n            \"title\": \"Condicionador AMO Óleo de Macadâmica 200 ml\",\n            \"price\": 32.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5b454a11-f269-f72b-a01e-25bf1111b750.jpg\"\n        },\n        {\n            \"id\": \"daaa20d8-9162-a547-0ee7-6ea2b54ef0fa\",\n            \"title\": \"The Wolf Among Us para Xbox 360\",\n            \"price\": 129.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/daaa20d8-9162-a547-0ee7-6ea2b54ef0fa.jpg\"\n        },\n        {\n            \"id\": \"a94d74ff-e847-4ab2-cbc7-edadedda3de4\",\n            \"title\": \"The Wolf Among Us para PS3\",\n            \"price\": 129.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/a94d74ff-e847-4ab2-cbc7-edadedda3de4.jpg\"\n        },\n        {\n            \"id\": \"3fbe9943-2f2d-99ba-8f1b-a0263d49339f\",\n            \"title\": \"Edredom Solteiro 150 Fios 1 Peça 100% Algodão\",\n            \"price\": 150.35,\n            \"image\": \"http://challenge-api.luizalabs.com/images/3fbe9943-2f2d-99ba-8f1b-a0263d49339f.jpg\"\n        },\n        {\n            \"id\": \"00118bbf-8a2b-731c-425b-925afe75052a\",\n            \"title\": \"Shampoo AMO Óleo de Macadâmia 200 ml\",\n            \"price\": 31.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/00118bbf-8a2b-731c-425b-925afe75052a.jpg\"\n        },\n        {\n            \"id\": \"83622627-8397-f58f-3652-722389767bb7\",\n            \"title\": \"Creme de Pentear para Cabelos Normais 240ml\",\n            \"price\": 32.7,\n            \"image\": \"http://challenge-api.luizalabs.com/images/83622627-8397-f58f-3652-722389767bb7.jpg\"\n        },\n        {\n            \"id\": \"3c297e41-8b76-a965-3fa7-d356bb4fc236\",\n            \"title\": \"Sabonete Gel 500ml\",\n            \"price\": 49.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/3c297e41-8b76-a965-3fa7-d356bb4fc236.jpg\"\n        },\n        {\n            \"id\": \"00448f16-ff3d-30e8-a1c6-cf695eb6f0c9\",\n            \"title\": \"Guitarra Strato Fender Amercian Special\",\n            \"price\": 8849.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/00448f16-ff3d-30e8-a1c6-cf695eb6f0c9.jpg\"\n        },\n        {\n            \"id\": \"23f86320-35c4-6de0-397f-c35508739ff5\",\n            \"title\": \"Máscara de Hidratação Capilar 300g\",\n            \"price\": 49.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/23f86320-35c4-6de0-397f-c35508739ff5.jpg\"\n        },\n        {\n            \"id\": \"adc14fd0-3dc0-ab07-325b-8cf144ca9b0f\",\n            \"title\": \"Sylvanian Families Conjunto de Cama para Adulto\",\n            \"price\": 31.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/adc14fd0-3dc0-ab07-325b-8cf144ca9b0f.jpg\"\n        },\n        {\n            \"id\": \"acbe51da-abd1-09ac-f76c-f7ec3c783d2e\",\n            \"title\": \"Farol Esquerdo para F-1000 / F-4000 - Ford\",\n            \"price\": 320.01,\n            \"image\": \"http://challenge-api.luizalabs.com/images/acbe51da-abd1-09ac-f76c-f7ec3c783d2e.jpg\"\n        },\n        {\n            \"id\": \"95d4709e-8eb9-8287-f315-d0173d6937c7\",\n            \"title\": \"Ulric de Varens UDV Extreme\",\n            \"price\": 59.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/95d4709e-8eb9-8287-f315-d0173d6937c7.jpg\"\n        },\n        {\n            \"id\": \"b2c126c2-ccba-3110-4849-812fc18960a5\",\n            \"title\": \"Tapete para Banheiro 40x60cm Foffo 6105\",\n            \"price\": 34.75,\n            \"image\": \"http://challenge-api.luizalabs.com/images/b2c126c2-ccba-3110-4849-812fc18960a5.jpg\"\n        },\n        {\n            \"id\": \"82727b28-d6b3-813c-5139-50d3b28c16d4\",\n            \"title\": \"Sylvanian Families Conjunto de Piano\",\n            \"price\": 34.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/82727b28-d6b3-813c-5139-50d3b28c16d4.jpg\"\n        },\n        {\n            \"id\": \"349c98ae-1748-70a1-2b20-ee65b7cdde2c\",\n            \"title\": \"Ulric de Varens UDV Blue\",\n            \"price\": 94.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/349c98ae-1748-70a1-2b20-ee65b7cdde2c.jpg\",\n            \"review\": \"5\"\n        },\n        {\n            \"id\": \"03e12cb7-31ba-0065-8cd4-8bd2c65ec170\",\n            \"title\": \"Ulric de Varens UDV Blue\",\n            \"price\": 59.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/03e12cb7-31ba-0065-8cd4-8bd2c65ec170.jpg\"\n        },\n        {\n            \"id\": \"69911235-0325-44b1-b30a-546554540502\",\n            \"title\": \"Sylvanian Families Conjunto de Forno\",\n            \"price\": 21.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/69911235-0325-44b1-b30a-546554540502.jpg\"\n        },\n        {\n            \"id\": \"5c5d992e-6524-1ec6-6227-eda62d8f608a\",\n            \"title\": \"Sylvanian Families Conjunto Sofá\",\n            \"price\": 31.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5c5d992e-6524-1ec6-6227-eda62d8f608a.jpg\"\n        },\n        {\n            \"id\": \"5ff35ebd-cb54-1d5d-1122-e820890c347e\",\n            \"title\": \"Tapete para Banheiro 40x60cm Foffo 6104\",\n            \"price\": 34.75,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5ff35ebd-cb54-1d5d-1122-e820890c347e.jpg\"\n        },\n        {\n            \"id\": \"141573b7-d3c8-2e5d-2d66-ea5e4aa15926\",\n            \"title\": \"Sylvanian Families Conjunto de Toalete\",\n            \"price\": 31.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/141573b7-d3c8-2e5d-2d66-ea5e4aa15926.jpg\"\n        },\n        {\n            \"id\": \"6e1f37ff-d3d4-88cc-dbbf-5747a327694f\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/6e1f37ff-d3d4-88cc-dbbf-5747a327694f.jpg\"\n        },\n        {\n            \"id\": \"b3074f84-4f29-ac76-fc8c-088805d429a6\",\n            \"title\": \"Farol Lado Esquerdo para Gol - Volkswagen\",\n            \"price\": 119.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/b3074f84-4f29-ac76-fc8c-088805d429a6.jpg\"\n        },\n        {\n            \"id\": \"9520bd3a-8a42-bcb6-7a52-b7b3a6b2c559\",\n            \"title\": \"Ulric de Varens UDV For Men\",\n            \"price\": 59.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/9520bd3a-8a42-bcb6-7a52-b7b3a6b2c559.jpg\",\n            \"review\": \"5\"\n        },\n        {\n            \"id\": \"1b455c54-fa27-0fb4-75af-287ee7490f92\",\n            \"title\": \"Tapete para Banheiro 40x60cm Foffo 6103\",\n            \"price\": 34.75,\n            \"image\": \"http://challenge-api.luizalabs.com/images/1b455c54-fa27-0fb4-75af-287ee7490f92.jpg\"\n        },\n        {\n            \"id\": \"5eb4044c-ca45-9eec-260d-36a57c95dceb\",\n            \"title\": \"Sylvanian Families Conjunto Televisão\",\n            \"price\": 21.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5eb4044c-ca45-9eec-260d-36a57c95dceb.jpg\"\n        },\n        {\n            \"id\": \"3a1f4bbf-999d-955c-af95-04506b9c7bb9\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/3a1f4bbf-999d-955c-af95-04506b9c7bb9.jpg\"\n        },\n        {\n            \"id\": \"d5286bc0-b971-5b4f-fa92-5e073499fb0a\",\n            \"title\": \"Taça em Cristal\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/d5286bc0-b971-5b4f-fa92-5e073499fb0a.jpg\"\n        },\n        {\n            \"id\": \"08ef01c3-c9a1-a8e7-0d8c-684d220f03e1\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/08ef01c3-c9a1-a8e7-0d8c-684d220f03e1.jpg\"\n        },\n        {\n            \"id\": \"2bf517cd-f443-3325-7f2a-c55c01e47fb5\",\n            \"title\": \"Easyline Bebê Porco com Carro com Acessório\",\n            \"price\": 25.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/2bf517cd-f443-3325-7f2a-c55c01e47fb5.jpg\"\n        },\n        {\n            \"id\": \"16ad93c6-0274-4dc4-9209-cd90b967288c\",\n            \"title\": \"Bonecos Família dos Porcos Sylvanian Families\",\n            \"price\": 82.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/16ad93c6-0274-4dc4-9209-cd90b967288c.jpg\"\n        },\n        {\n            \"id\": \"22425061-43d3-5d7b-e040-afbe64c642e8\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 30.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/22425061-43d3-5d7b-e040-afbe64c642e8.jpg\"\n        },\n        {\n            \"id\": \"f1db4705-7a8c-aa0a-ff19-041d97ceb6ec\",\n            \"title\": \"Sylvanian Families Bebê Rato com Escorregador\",\n            \"price\": 25.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/f1db4705-7a8c-aa0a-ff19-041d97ceb6ec.jpg\"\n        },\n        {\n            \"id\": \"bc5bf61e-08ea-5931-e57e-24ab3ca86c00\",\n            \"title\": \"Taça para Cerveja 1 Peça\",\n            \"price\": 30.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/bc5bf61e-08ea-5931-e57e-24ab3ca86c00.jpg\"\n        },\n        {\n            \"id\": \"39a238b2-34cd-b432-ed6f-23c5eb37ed01\",\n            \"title\": \"Farol Direito para F-1000 / F-4000 - Ford\",\n            \"price\": 287,\n            \"image\": \"http://challenge-api.luizalabs.com/images/39a238b2-34cd-b432-ed6f-23c5eb37ed01.jpg\"\n        },\n        {\n            \"id\": \"32fc4ba6-141b-6289-d5fc-61ae1ce189db\",\n            \"title\": \"Taça de Cristal para Cerveja 400ml\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/32fc4ba6-141b-6289-d5fc-61ae1ce189db.jpg\"\n        },\n        {\n            \"id\": \"019c5ae1-2542-8485-be6b-963de7d4dade\",\n            \"title\": \"Sabonete Gel 500ml\",\n            \"price\": 49.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/019c5ae1-2542-8485-be6b-963de7d4dade.jpg\"\n        },\n        {\n            \"id\": \"5d2a360f-6653-bb5b-74db-1da2ea3ffe5d\",\n            \"title\": \"Taça de Cristal para Cerveja 300ml\",\n            \"price\": 26.63,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5d2a360f-6653-bb5b-74db-1da2ea3ffe5d.jpg\"\n        },\n        {\n            \"id\": \"c7d79559-ca73-8f6e-da19-957e483d2d56\",\n            \"title\": \"Sabonete Gel 500ml\",\n            \"price\": 49.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/c7d79559-ca73-8f6e-da19-957e483d2d56.jpg\"\n        },\n        {\n            \"id\": \"79b1c283-00ef-6b22-1c8d-b0721999e2f0\",\n            \"title\": \"Aparelho de Musculação Academia Particular\",\n            \"price\": 799.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/79b1c283-00ef-6b22-1c8d-b0721999e2f0.jpg\",\n            \"review\": \"4.4166665\"\n        },\n        {\n            \"id\": \"5e53e212-536f-e061-6cde-5c9bd840d8ae\",\n            \"title\": \"Óleo de Tratamento Capilar AMO 60ml\",\n            \"price\": 51.4,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5e53e212-536f-e061-6cde-5c9bd840d8ae.jpg\"\n        },\n        {\n            \"id\": \"413e345a-f749-2404-4a18-5688cd96391e\",\n            \"title\": \"Central Multimídia JVC KW-V31BT Tela 6,1\\\" Touch\",\n            \"price\": 1899,\n            \"image\": \"http://challenge-api.luizalabs.com/images/413e345a-f749-2404-4a18-5688cd96391e.jpg\"\n        },\n        {\n            \"id\": \"38df87e2-0c1e-dde3-f531-7c635a84ca39\",\n            \"title\": \"Moto Elétrica ZX-Cross 6V Vermelha\",\n            \"price\": 719,\n            \"image\": \"http://challenge-api.luizalabs.com/images/38df87e2-0c1e-dde3-f531-7c635a84ca39.jpg\"\n        },\n        {\n            \"id\": \"8a9cb27b-5355-060f-9a6d-3011c5bd6931\",\n            \"title\": \"Central Multimídia JVC KW-V41BT Tela 6,95??\",\n            \"price\": 1899,\n            \"image\": \"http://challenge-api.luizalabs.com/images/8a9cb27b-5355-060f-9a6d-3011c5bd6931.jpg\"\n        },\n        {\n            \"id\": \"5ab740b8-4046-3f19-ae21-3302dd7abef8\",\n            \"title\": \"LEGO Ninjago Entrada na Serpente\",\n            \"price\": 369.99,\n            \"image\": \"http://challenge-api.luizalabs.com/images/5ab740b8-4046-3f19-ae21-3302dd7abef8.jpg\"\n        },\n        {\n            \"id\": \"d2a7c4f5-9869-38d3-8a03-92daec8e0ac1\",\n            \"title\": \"Box para Colchão Casal 138x188cm\",\n            \"price\": 450,\n            \"image\": \"http://challenge-api.luizalabs.com/images/d2a7c4f5-9869-38d3-8a03-92daec8e0ac1.jpg\"\n        },\n        {\n            \"id\": \"35051d93-e0c1-cad3-b1d8-837e79be260e\",\n            \"title\": \"Colchão Plumatex King Size Mola Pocket 193x203cm\",\n            \"price\": 1300,\n            \"image\": \"http://challenge-api.luizalabs.com/images/35051d93-e0c1-cad3-b1d8-837e79be260e.jpg\"\n        },\n        {\n            \"id\": \"dfd4ddcc-0b46-770f-9640-5a568ef63130\",\n            \"title\": \"Box para Colchão King Size 193x203cm\",\n            \"price\": 590,\n            \"image\": \"http://challenge-api.luizalabs.com/images/dfd4ddcc-0b46-770f-9640-5a568ef63130.jpg\"\n        },\n        {\n            \"id\": \"8fe61da1-af55-0726-ae46-c5f31abfc1bd\",\n            \"title\": \"Colchão Plumatex Casal Mola Pocket 138x188cm\",\n            \"price\": 999,\n            \"image\": \"http://challenge-api.luizalabs.com/images/8fe61da1-af55-0726-ae46-c5f31abfc1bd.jpg\"\n        },\n        {\n            \"id\": \"73b7e428-d05d-9d6e-466d-99d99218b364\",\n            \"title\": \"Box para Colchão Casal 138x188cm\",\n            \"price\": 400,\n            \"image\": \"http://challenge-api.luizalabs.com/images/73b7e428-d05d-9d6e-466d-99d99218b364.jpg\"\n        },\n        {\n            \"id\": \"41598fe2-f7d5-1a81-da15-7f304f5ca064\",\n            \"title\": \"Box para Colchão Queen Size 158x198cm\",\n            \"price\": 500,\n            \"image\": \"http://challenge-api.luizalabs.com/images/41598fe2-f7d5-1a81-da15-7f304f5ca064.jpg\"\n        },\n        {\n            \"id\": \"c9b4207b-c5bd-1a3e-93c1-acf6725ff96f\",\n            \"title\": \"Cadeira para Auto Burigotto Matrix p/ Crianças\",\n            \"price\": 678.8,\n            \"image\": \"http://challenge-api.luizalabs.com/images/c9b4207b-c5bd-1a3e-93c1-acf6725ff96f.jpg\"\n        },\n        {\n            \"id\": \"3475ae62-7812-9f46-a228-294f92c8e1db\",\n            \"title\": \"Assento Sanitário Cinza Real Century\",\n            \"price\": 492.07,\n            \"image\": \"http://challenge-api.luizalabs.com/images/3475ae62-7812-9f46-a228-294f92c8e1db.jpg\"\n        },\n        {\n            \"id\": \"8fe4203d-4f0a-6dd0-dd4c-f846cc0335de\",\n            \"title\": \"Película Protetora para Samsung Galaxy S6\",\n            \"price\": 39.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/8fe4203d-4f0a-6dd0-dd4c-f846cc0335de.jpg\"\n        },\n        {\n            \"id\": \"7bc2e041-e11a-b934-6e87-a657e47997ca\",\n            \"title\": \"Cozinha Somopar 6 Portas Letícia\",\n            \"price\": 1440,\n            \"image\": \"http://challenge-api.luizalabs.com/images/7bc2e041-e11a-b934-6e87-a657e47997ca.jpg\"\n        },\n        {\n            \"id\": \"e92a2ec5-4f36-df00-e982-8d9a45e12c5c\",\n            \"title\": \"Box para Colchão Solteiro 88x188cm\",\n            \"price\": 450,\n            \"image\": \"http://challenge-api.luizalabs.com/images/e92a2ec5-4f36-df00-e982-8d9a45e12c5c.jpg\"\n        },\n        {\n            \"id\": \"ebfb31c0-00af-0801-fdb5-000ae1d8cddf\",\n            \"title\": \"Assento Sanitário Creme Century\",\n            \"price\": 492.07,\n            \"image\": \"http://challenge-api.luizalabs.com/images/ebfb31c0-00af-0801-fdb5-000ae1d8cddf.jpg\"\n        },\n        {\n            \"id\": \"0e062300-ac6f-ba7a-18c0-6fbed3af0498\",\n            \"title\": \"Película Protetora para iPhone 6\",\n            \"price\": 39.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/0e062300-ac6f-ba7a-18c0-6fbed3af0498.jpg\"\n        },\n        {\n            \"id\": \"69e2f68f-20cc-b9c0-8365-89928a2dcf88\",\n            \"title\": \"Película Protetora para iPhone 6 Plus\",\n            \"price\": 39.9,\n            \"image\": \"http://challenge-api.luizalabs.com/images/69e2f68f-20cc-b9c0-8365-89928a2dcf88.jpg\"\n        }\n    ],\n    \"meta\": {\n        \"page_size\": 100,\n        \"page_number\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "/store/products/:id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/store/products/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"store",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1bf0f365-fbdd-4e21-9786-da459d78dd1f"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /store/products/:id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1bf0f365-fbdd-4e21-9786-da459d78dd1f"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:13:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /store/products/:id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1bf0f365-fbdd-4e21-9786-da459d78dd1f"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:13:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[200] | /store/products/:id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1bf0f365-fbdd-4e21-9786-da459d78dd1f"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "212"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:14:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n    \"title\": \"Cadeira para Auto Iseos Bébé Confort Earth Brown\",\n    \"price\": 1699,\n    \"image\": \"http://challenge-api.luizalabs.com/images/1bf0f365-fbdd-4e21-9786-da459d78dd1f.jpg\"\n}"
+								},
+								{
+									"name": "[400] | /store/products/:id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "112"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:14:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"id must be a UUID\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[404] | /store/products/:id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/store/products/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"store",
+												"products",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1bf0f365-fbdd-4e21-9786-da459d78dd2f"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:14:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Accounts",
+					"item": [
+						{
+							"name": "/users/account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Name Lastname\",\r\n    \"email\": \"email@emailone.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/account",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"account"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:15:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:15:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[400] | /users/account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "144"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:15:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"name should not be empty\",\n            \"email must be an email\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Name Lastname\",\r\n    \"email\": \"email@emailone.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDEzMzRiMC1iZjQ4LTQxMmQtYWMwYi0xODZmMmYzMWMxNjAiLCJlbWFpbCI6ImVtYWlsQGVtYWlsb25lLmNvbSIsImlhdCI6MTY4NjUzMjU4NCwiZXhwIjoxNjg2NTM2MTg0fQ.US6hCTq-1RVdbQqKQ5gdLo67JNHl9YylS_ydnZzD97Y"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "97"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:16:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"ad1334b0-bf48-412d-ac0b-186f2f31c160\",\n    \"name\": \"Name Lastname\",\n    \"email\": \"email@emailone.com\"\n}"
+								},
+								{
+									"name": "[409] | /users/account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Name Lastname\",\r\n    \"email\": \"email@emailone.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "115"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:15:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"407a0432-4e1f-46d1-bda9-44e1c19f1dc5\",\n    \"response\": {\n        \"reason\": \"Conflit\",\n        \"errors\": [\n            \"email needs to be unique\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/account",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/users/account",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"account"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/account",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:17:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/account",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:17:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/account",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:17:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[200] | /users/account",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "97"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:18:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"87bfa757-646d-432c-930b-246aeca75046\",\n    \"name\": \"Name Lastname\",\n    \"email\": \"email@emailone.com\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/account",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"email@emailone.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/account",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"account"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:18:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:18:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:18:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[204] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "access-token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4N2JmYTc1Ny02NDZkLTQzMmMtOTMwYi0yNDZhZWNhNzUwNDYiLCJlbWFpbCI6ImVtYWlsQGVtYWlsb25lLmNvbSIsImlhdCI6MTY4NjUzMjc1MSwiZXhwIjoxNjg2NTM2MzUxfQ.swZ1A3GvK_RU-S72R0PUcuZKm-csGwAI6rGasoBz-s8"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:19:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "[400] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "119"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:19:39 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"name should not be empty\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[400] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"\",\r\n    \"email\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "144"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:19:52 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cdce7527-266d-4fdf-aced-37ade753d0c5\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"name should not be empty\",\n            \"email must be an email\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[204] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Name\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "access-token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4N2JmYTc1Ny02NDZkLTQzMmMtOTMwYi0yNDZhZWNhNzUwNDYiLCJlbWFpbCI6ImVtYWlsQGVtYWlsb25lLmNvbSIsImlhdCI6MTY4NjUzMjgwNiwiZXhwIjoxNjg2NTM2NDA2fQ.o2RLowMOONcXgAAZKQEwHQ2Occs3d3sw81ojQh8kALA"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:20:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "[204] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@email.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "access-token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4N2JmYTc1Ny02NDZkLTQzMmMtOTMwYi0yNDZhZWNhNzUwNDYiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlhdCI6MTY4NjUzMjg1NCwiZXhwIjoxNjg2NTM2NDU0fQ.33AY-CwPuCcE6wTMoIjjUzHglOXDcDJQHFSVcuBeAKg"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:20:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "[409] | /users/account",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@emailtwo.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "115"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:22:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Conflit\",\n        \"errors\": [\n            \"email already registered\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/account",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/users/account",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"account"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/account",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:23:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/account",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:23:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/account",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:23:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[204] | /users/account",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/account",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"account"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:23:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Authentications",
+					"item": [
+						{
+							"name": "/users/authentication",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"email@emailone.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/authentication",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"authentication"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/authentication",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@emailone.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/authentication",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"authentication"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:24:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/authentication",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@emailone.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/authentication",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"authentication"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:24:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/authentication",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@emailthree.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/authentication",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"authentication"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:24:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/authentication",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"email@emailone.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/authentication",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"authentication"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "access-token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlOGJhNDUyZS04NjUzLTQwZmItODFjYS0zZWQ4ZWM1YWY3ZWIiLCJlbWFpbCI6ImVtYWlsQGVtYWlsb25lLmNvbSIsImlhdCI6MTY4NjUzMzEwMCwiZXhwIjoxNjg2NTM2NzAwfQ.w7YlqQHgzePIY3T-UuXHi1hs60d7EoR3zzKHB3thPkI"
+										},
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "97"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:25:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"e8ba452e-8653-40fb-81ca-3ed8ec5af7eb\",\n    \"name\": \"Name Lastname\",\n    \"email\": \"email@emailone.com\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Whishlists",
+					"item": [
+						{
+							"name": "/users/wishlist",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/users/wishlist",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"wishlist"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:25:29 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:25:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:25:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[400] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "112"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:25:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"id must be a UUID\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "268"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:26:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"e1affa12-1764-4e34-98c2-3a5404d78fe8\",\n    \"product\": {\n        \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n        \"title\": \"Cadeira para Auto Iseos Bébé Confort Earth Brown\",\n        \"price\": 1699,\n        \"image\": \"http://challenge-api.luizalabs.com/images/1bf0f365-fbdd-4e21-9786-da459d78dd1f.jpg\"\n    }\n}"
+								},
+								{
+									"name": "[404] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd2f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:26:21 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "262"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:27:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"bc2b4f55-b601-417c-a43a-a8d47952b889\",\n    \"product\": {\n        \"id\": \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\",\n        \"title\": \"Salvatore Ferragamo Emozione Perfume Feminino\",\n        \"price\": 545,\n        \"image\": \"http://challenge-api.luizalabs.com/images/dbaa0b7d-ddab-8bef-4715-bab2c42b5446.jpg\"\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"d6d9ab20-ef42-bab5-9b6e-6dc90d981472\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "252"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:27:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"5abd86e5-84d3-4aeb-9655-380ee5e47864\",\n    \"product\": {\n        \"id\": \"d6d9ab20-ef42-bab5-9b6e-6dc90d981472\",\n        \"title\": \"Taça para Champanhe/Vinho 1 Peça\",\n        \"price\": 37.9,\n        \"image\": \"http://challenge-api.luizalabs.com/images/d6d9ab20-ef42-bab5-9b6e-6dc90d981472.jpg\"\n    }\n}"
+								},
+								{
+									"name": "[201] | /users/wishlist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "262"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:27:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"d762d20d-4ff2-49e6-9a71-00af4f599505\",\n    \"product\": {\n        \"id\": \"ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8\",\n        \"title\": \"Sylvanian Families Bebê Ovelha com Triciclo\",\n        \"price\": 24.9,\n        \"image\": \"http://challenge-api.luizalabs.com/images/ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8.jpg\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/wishlist?page=:page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/users/wishlist?page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"wishlist"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:28:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:28:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:28:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[200] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "581"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:29:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": \"e1affa12-1764-4e34-98c2-3a5404d78fe8\",\n            \"product\": {\n                \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n                \"title\": \"Cadeira para Auto Iseos Bébé Confort Earth Brown\",\n                \"price\": 1699,\n                \"image\": \"http://challenge-api.luizalabs.com/images/1bf0f365-fbdd-4e21-9786-da459d78dd1f.jpg\"\n            }\n        },\n        {\n            \"id\": \"bc2b4f55-b601-417c-a43a-a8d47952b889\",\n            \"product\": {\n                \"id\": \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\",\n                \"title\": \"Salvatore Ferragamo Emozione Perfume Feminino\",\n                \"price\": 545,\n                \"image\": \"http://challenge-api.luizalabs.com/images/dbaa0b7d-ddab-8bef-4715-bab2c42b5446.jpg\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"page_size\": 2,\n        \"page_number\": 1\n    }\n}"
+								},
+								{
+									"name": "[400] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist?page=a",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "a"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "187"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:30:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"page must be a number conforming to the specified constraints\",\n            \"page must not be less than 1\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[400] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist?page=0",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "123"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:30:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Bad Request\",\n        \"errors\": [\n            \"page must not be less than 1\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "[200] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist?page=1",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "581"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:30:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": \"e1affa12-1764-4e34-98c2-3a5404d78fe8\",\n            \"product\": {\n                \"id\": \"1bf0f365-fbdd-4e21-9786-da459d78dd1f\",\n                \"title\": \"Cadeira para Auto Iseos Bébé Confort Earth Brown\",\n                \"price\": 1699,\n                \"image\": \"http://challenge-api.luizalabs.com/images/1bf0f365-fbdd-4e21-9786-da459d78dd1f.jpg\"\n            }\n        },\n        {\n            \"id\": \"bc2b4f55-b601-417c-a43a-a8d47952b889\",\n            \"product\": {\n                \"id\": \"dbaa0b7d-ddab-8bef-4715-bab2c42b5446\",\n                \"title\": \"Salvatore Ferragamo Emozione Perfume Feminino\",\n                \"price\": 545,\n                \"image\": \"http://challenge-api.luizalabs.com/images/dbaa0b7d-ddab-8bef-4715-bab2c42b5446.jpg\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"page_size\": 2,\n        \"page_number\": 1\n    }\n}"
+								},
+								{
+									"name": "[200] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist?page=2",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "565"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:30:48 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": \"5abd86e5-84d3-4aeb-9655-380ee5e47864\",\n            \"product\": {\n                \"id\": \"d6d9ab20-ef42-bab5-9b6e-6dc90d981472\",\n                \"title\": \"Taça para Champanhe/Vinho 1 Peça\",\n                \"price\": 37.9,\n                \"image\": \"http://challenge-api.luizalabs.com/images/d6d9ab20-ef42-bab5-9b6e-6dc90d981472.jpg\"\n            }\n        },\n        {\n            \"id\": \"d762d20d-4ff2-49e6-9a71-00af4f599505\",\n            \"product\": {\n                \"id\": \"ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8\",\n                \"title\": \"Sylvanian Families Bebê Ovelha com Triciclo\",\n                \"price\": 24.9,\n                \"image\": \"http://challenge-api.luizalabs.com/images/ec92cbdd-b7e6-e2c2-a0e8-70ae001cb3d8.jpg\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"page_size\": 2,\n        \"page_number\": 2\n    }\n}"
+								},
+								{
+									"name": "[200] | /users/wishlist?page=:page",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist?page=3",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "50"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:31:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [],\n    \"meta\": {\n        \"page_size\": 0,\n        \"page_number\": 3\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/wishlist/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "ApiKey",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "ApiVersion",
+										"value": "{{api-version}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{access-token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/users/wishlist/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"users",
+										"wishlist",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bc2b4f55-b601-417c-a43a-a8d47952b889"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "[404] | /users/wishlist/:id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "da5bd756-271b-46ad-95ff-998222ad6671"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "102"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:31:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Resource Not Found or Deprecated\"\n    }\n}"
+								},
+								{
+									"name": "[401] | /users/wishlist/:id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text",
+												"disabled": true
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "da5bd756-271b-46ad-95ff-998222ad6671"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "89"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:31:34 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Unauthorized Access\"\n    }\n}"
+								},
+								{
+									"name": "[403] | /users/wishlist/:id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "da5bd756-271b-46ad-95ff-998222ad6671"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "content-type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "content-length",
+											"value": "86"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:31:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"cf34116d-1d7e-4371-9d8f-dc644eda0f80\",\n    \"response\": {\n        \"reason\": \"Forbidden Access\"\n    }\n}"
+								},
+								{
+									"name": "[204] | /users/wishlist/:id",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "ApiKey",
+												"value": "{{api-key}}",
+												"type": "text"
+											},
+											{
+												"key": "ApiVersion",
+												"value": "{{api-version}}",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{access-token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}/users/wishlist/:id",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"users",
+												"wishlist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "bc2b4f55-b601-417c-a43a-a8d47952b889"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 12 Jun 2023 01:33:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=72"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

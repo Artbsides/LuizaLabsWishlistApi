@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { HeaderAPIKeyStrategy } from "passport-headerapikey";
+import { VerifiedCallback } from "passport-jwt";
 import { AuthGuard, PassportStrategy } from "@nestjs/passport";
 import { UnauthorizedException } from "Api/Exceptions/Throws/UnauthorizedException";
 
@@ -9,7 +10,7 @@ export class ApiKeyStrategy extends PassportStrategy(HeaderAPIKeyStrategy, "ApiK
     process.env.API_KEYS?.split(",");
 
   constructor() {
-    super({ header: "ApiKey" }, true, async (key: string, done: any) => {
+    super({ header: "ApiKey" }, true, (key: string, done: VerifiedCallback) => {
       if (this.keys?.find(value => key === value))
         return done(null, true);
 

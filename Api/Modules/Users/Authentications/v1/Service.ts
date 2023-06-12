@@ -14,13 +14,13 @@ export class AuthenticationsService {
     @Inject(forwardRef(() => AccountsService)) private readonly accountsService: AccountsService
   ) {}
 
-  async validate(user: AccountPartial): Promise<Account> {
-    return await this.accountsService.retrieveBy(user);
+  validate(user: AccountPartial): Account {
+    return this.accountsService.retrieveBy(user);
   }
 
   async authenticate(data: AccountPartial, account?: Account): Promise<Authentication> {
     account = account
-      ?? await this.validate(data);
+      ?? this.validate(data);
 
     return { account: account, token: await this.jwtService.signAsync({ sub: account.id, email: account.email }) };
   }

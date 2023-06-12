@@ -11,8 +11,8 @@ import { AccountPartial } from "../Models/AccountPartial";
 export class AccountsInMemoryRepository {
   protected accounts: Account[] = [];
 
-  async create(data: CreateDto): Promise<Account> {
-    if (await this.retrieveBy({ email: data.email }))
+  create(data: CreateDto): Account {
+    if (this.retrieveBy({ email: data.email }))
       throw new UniqueConstraintException({ error: "email needs to be unique" });
 
     const account: Account = { ...data,
@@ -22,7 +22,7 @@ export class AccountsInMemoryRepository {
     return this.accounts.push(account), account;
   }
 
-  async retrieveBy(user: AccountPartial): Promise<Account|undefined> {
+  retrieveBy(user: AccountPartial): Account | undefined {
     const account = this.accounts.find(account => user?.id
       ? account.email == user.email && account.id == user.id
       : account.email == user.email);
@@ -30,8 +30,8 @@ export class AccountsInMemoryRepository {
     return account;
   }
 
-  async updateBy(user: AccountPartial, data: UpdateByDto): Promise<Account> {
-    if (data.email && data.email !== user.email && await this.retrieveBy({ email: data.email }))
+  updateBy(user: AccountPartial, data: UpdateByDto): Account {
+    if (data.email && data.email !== user.email && this.retrieveBy({ email: data.email }))
       throw new UniqueConstraintException({ error: "email already registered" });
 
     const account = this.accounts
@@ -46,7 +46,7 @@ export class AccountsInMemoryRepository {
     return this.accounts[account];
   }
 
-  async deleteBy(user: AccountPartial): Promise<void> {
+  deleteBy(user: AccountPartial): void {
     const account = this.accounts
       .findIndex(account => account.id == user.id);
 

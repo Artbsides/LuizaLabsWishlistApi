@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Patch, Post, Request, Response, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Patch, Post,
+  Request, Response, UseGuards } from "@nestjs/common";
 import { FastifyReply } from "fastify";
 import { AccountsService } from "./Service";
 import { JwtAuthGuard } from "Api/Confs/Authentication";
@@ -19,14 +20,14 @@ export class AccountsController {
     const { account, token } = await this.service
       .create(data);
 
-    return response.header("ACCESS-TOKEN", token)
+    return await response.header("ACCESS-TOKEN", token)
       .send(plainToInstance(Account, account, { excludeExtraneousValues: true }));
   }
 
   @Get()
   @UseGuards(JwtAuthGuard)
-  async retrieveBy(@Request() request: UserRequest): Promise<Account> {
-    const response = await this.service
+  retrieveBy(@Request() request: UserRequest): Account {
+    const response = this.service
       .retrieveBy(request.user);
 
     return plainToInstance(Account, response);
@@ -35,17 +36,19 @@ export class AccountsController {
   @Patch()
   @UseGuards(JwtAuthGuard)
   @HttpCode(HttpStatus.NO_CONTENT)
-  async updateBy(@Request() request: UserRequest, @Body() data: UpdateByDto, @Response() response: FastifyReply): Promise<void> {
+  async updateBy(@Request() request: UserRequest, @Body() data: UpdateByDto,
+    @Response() response: FastifyReply): Promise<void>
+  {
     const { token } = await this.service
       .updateBy(request.user, data);
 
-    response.header("ACCESS-TOKEN", token).send();
+    await response.header("ACCESS-TOKEN", token).send();
   }
 
   @Delete()
   @UseGuards(JwtAuthGuard)
   @HttpCode(HttpStatus.NO_CONTENT)
-  async deleteBy(@Request() request: UserRequest): Promise<void> {
-    await this.service.deleteBy(request.user);
+  deleteBy(@Request() request: UserRequest): void {
+    this.service.deleteBy(request.user);
   }
 }

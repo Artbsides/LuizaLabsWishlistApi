@@ -1,4 +1,5 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post, Query, Request, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Post,
+  Query, Request, UseGuards } from "@nestjs/common";
 import { plainToInstance } from "class-transformer";
 import { WishlistsService } from "./Service";
 import { JwtAuthGuard } from "Api/Confs/Authentication";
@@ -26,8 +27,8 @@ export class WishlistsController {
 
   @Get()
   @UseGuards(JwtAuthGuard)
-  async retrieve(@Request() request: UserRequest, @Query() query: RetrieveDto): Promise<WishlistPaginated> {
-    const data = await this.service
+  retrieve(@Request() request: UserRequest, @Query() query: RetrieveDto): WishlistPaginated {
+    const data = this.service
       .retrieve(request.user, query);
 
     return plainToInstance(WishlistPaginated, {
@@ -42,7 +43,7 @@ export class WishlistsController {
   @Delete(":id")
   @UseGuards(JwtAuthGuard)
   @HttpCode(HttpStatus.NO_CONTENT)
-  async deleteBy(@Request() request: UserRequest, @Param() params: DeleteByDto): Promise<void> {
-    await this.service.deleteBy(request.user, params);
+  deleteBy(@Request() request: UserRequest, @Param() params: DeleteByDto): void {
+    this.service.deleteBy(request.user, params);
   }
 }

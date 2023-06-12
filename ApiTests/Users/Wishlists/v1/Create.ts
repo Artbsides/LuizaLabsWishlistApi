@@ -5,20 +5,17 @@ import { App } from "ApiTests/App";
 import { requests } from "ApiTests/Data/v1/Requests";
 import { products } from "ApiTests/Data/v1/Products";
 import { headers } from "ApiTests/Data/v1/Headers";
+import { payload } from "ApiTests/Data/v1/Data";
 
 export const WishlistCreateV1 = () => describe("Create", () => {
-  let app = new App;
-  let token: string;
-  let httpService: HttpService;
+  const app = new App;
 
   const mockAxiosResponse = { ...requests.response,
     data: products.data[0]
   };
 
-  const payload: any = {
-    name: "Name",
-    email: "email@email.com"
-  };
+  let token: string;
+  let httpService: HttpService;
 
   beforeAll(async () => {
     const module = await app
@@ -37,16 +34,18 @@ export const WishlistCreateV1 = () => describe("Create", () => {
         expect(response.payload).not.toBeNull();
       });
 
-      await app.server.inject({ method: "POST", url: "/users/wishlist", headers: { ApiKey: headers.ApiKey }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "POST", url: "/users/wishlist",
+        headers: { ApiKey: headers.ApiKey }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
+          expect(response.payload).not.toBeNull();
       });
     });
 
     it("Should return unauthorized", async () => {
-      await app.server.inject({ method: "POST", url: "/users/wishlist", headers: { ApiVersion: headers.ApiVersion }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "POST", url: "/users/wishlist",
+        headers: { ApiVersion: headers.ApiVersion }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
+          expect(response.payload).not.toBeNull();
       });
     });
 
@@ -58,10 +57,11 @@ export const WishlistCreateV1 = () => describe("Create", () => {
     });
 
     it("Should return not found", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
-      jest.spyOn(httpService, "get")
-        .mockImplementationOnce(() => throwError(() => { return { ...requests.error, response: { status: HttpStatus.NOT_FOUND } }}));
+      jest.spyOn(httpService, "get").mockImplementationOnce(() => throwError(() => {
+        return { ...requests.error, response: { status: HttpStatus.NOT_FOUND }
+      }}));
 
       const payload: any = {
         id: mockAxiosResponse.data.id
@@ -107,7 +107,7 @@ export const WishlistCreateV1 = () => describe("Create", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

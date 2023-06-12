@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { HttpStatus } from "@nestjs/common";
 import { AxiosResponse, AxiosError, AxiosHeaders } from "axios";
 
@@ -14,4 +15,5 @@ export const requests: Record<string, AxiosResponse> = {
   }
 };
 
-export const error = new AxiosError("Lorem", "Lorem", requests.response.config, requests.response);
+export const error = new AxiosError(faker.lorem.text(), AxiosError.ERR_BAD_REQUEST,
+  requests.response.config, requests.response);

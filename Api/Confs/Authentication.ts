@@ -27,7 +27,7 @@ export class JwtAuthGuard implements CanActivate {
       const payload = await this.jwtService
         .verifyAsync<Payload>(token, { secret: process.env.JWT_SECRET });
 
-      await this.authService.validate(payload);
+      this.authService.validate(payload);
 
       request.user = new AccountPartial({ id: payload.sub, email: payload.email });
     }
@@ -38,10 +38,14 @@ export class JwtAuthGuard implements CanActivate {
     return true;
   }
 
-  private extractTokenFromHeader(request: Request): string|undefined {
-    const [ type, token ] = request.headers["authorization"]
-      ?.split(" ") ?? [];
+  private extractTokenFromHeader(request: UserRequest): string|undefined {
+    const header = request
+      .headers["authorization"] as string;
 
-    return type === "Bearer" ? token : undefined;
+    const [ type, token ] = header?.split(" ") ?? [];
+
+    return type === "Bearer"
+      ? token
+      : undefined;
   }
 }

@@ -21,7 +21,7 @@ export class ExceptionsHandler implements ExceptionFilter {
       ]);
     }
 
-    host.switchToHttp().getResponse<FastifyReply>().status(status)
+    await host.switchToHttp().getResponse<FastifyReply>().status(status)
       .send(this.getResponse(httpException));
   }
 

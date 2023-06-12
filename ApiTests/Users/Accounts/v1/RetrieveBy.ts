@@ -4,7 +4,7 @@ import { payload } from "ApiTests/Data/v1/Data";
 import { headers } from "ApiTests/Data/v1/Headers";
 
 export const RetrieveByV1 = () => describe("RetrieveBy", () => {
-  let app = new App;
+  const app = new App;
   let token: string;
 
   beforeAll(async () => {
@@ -21,16 +21,18 @@ export const RetrieveByV1 = () => describe("RetrieveBy", () => {
         expect(response.payload).not.toBeNull();
       });
 
-      await app.server.inject({ method: "GET", url: "/users/account", headers: { ApiKey: headers.ApiKey }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "GET", url: "/users/account",
+        headers: { ApiKey: headers.ApiKey }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
+          expect(response.payload).not.toBeNull();
       });
     });
 
     it("Should return unauthorized", async () => {
-      await app.server.inject({ method: "GET", url: "/users/account", headers: { ApiVersion: headers.ApiVersion }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "GET", url: "/users/account",
+        headers: { ApiVersion: headers.ApiVersion }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
+          expect(response.payload).not.toBeNull();
       });
     });
 

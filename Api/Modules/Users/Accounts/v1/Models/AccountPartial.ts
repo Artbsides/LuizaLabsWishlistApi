@@ -5,6 +5,6 @@ export class AccountPartial extends PartialType(Account) {
   constructor(data: AccountPartial) {
     super();
 
-    Object.assign(this, data)
+    Object.assign(this, data);
   }
-};
+}

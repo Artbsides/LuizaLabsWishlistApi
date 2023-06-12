@@ -17,20 +17,20 @@ export class WishlistsService {
   ) {}
 
   async create(user: AccountPartial, data: CreateDto): Promise<Wishlist> {
-    const product = await this.inMemoryRepository.retrieveBy(user, data as Product)
+    const product = this.inMemoryRepository.retrieveBy(user, data as Product)
 
     if (product)
       throw new UniqueConstraintException({ error: "id already registered" });
 
-    return await this.inMemoryRepository
+    return this.inMemoryRepository
       .create(user, await this.productsService.retrieveBy(data));
   }
 
-  async retrieve(user: AccountPartial, query: RetrieveDto): Promise<Wishlist[]> {
-    return await this.inMemoryRepository.retrieve(user, query);
+  retrieve(user: AccountPartial, query: RetrieveDto): Wishlist[] {
+    return this.inMemoryRepository.retrieve(user, query);
   }
 
-  async deleteBy(user: AccountPartial, params: DeleteByDto): Promise<void> {
-    await this.inMemoryRepository.deleteBy(user, params);
+  deleteBy(user: AccountPartial, params: DeleteByDto): void {
+    this.inMemoryRepository.deleteBy(user, params);
   }
 }

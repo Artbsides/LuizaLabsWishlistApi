@@ -5,21 +5,18 @@ import { App } from "ApiTests/App";
 import { requests } from "ApiTests/Data/v1/Requests";
 import { products } from "ApiTests/Data/v1/Products";
 import { headers } from "ApiTests/Data/v1/Headers";
+import { payload } from "ApiTests/Data/v1/Data";
 
 export const WishlistDeleteV1 = () => describe("Delete", () => {
-  let app = new App;
-  let token: string;
-  let httpService: HttpService;
-  let id: string;
+  const app = new App;
 
   const mockAxiosResponse = { ...requests.response,
     data: products.data[0]
   };
 
-  const payload: any = {
-    name: "Name",
-    email: "email@email.com"
-  };
+  let token: string;
+  let httpService: HttpService;
+  let id: string;
 
   beforeAll(async () => {
     const module = await app
@@ -33,7 +30,15 @@ export const WishlistDeleteV1 = () => describe("Delete", () => {
     jest.spyOn(httpService, "get")
       .mockImplementationOnce(() => of(mockAxiosResponse));
 
-    await app.server.inject({method: "POST", url: "/users/wishlist", headers: { ...headers, authorization: token }, payload: { id: mockAxiosResponse.data.id } }).then(response => {
+    await app.server.inject({method: "POST", url: "/users/wishlist",
+      headers: { ...headers,
+        authorization: token
+      },
+      payload: {
+        id: mockAxiosResponse.data.id
+      }
+    })
+    .then(response => {
       id = response.json().id;
     });
   });
@@ -45,16 +50,18 @@ export const WishlistDeleteV1 = () => describe("Delete", () => {
         expect(response.payload).not.toBeNull();
       });
 
-      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${id}`, headers: { ApiKey: headers.ApiKey }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${id}`,
+        headers: { ApiKey: headers.ApiKey }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
+          expect(response.payload).not.toBeNull();
       });
     });
 
     it("Should return unauthorized", async () => {
-      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${id}`, headers: { ApiVersion: headers.ApiVersion }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${id}`,
+        headers: { ApiVersion: headers.ApiVersion }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
+          expect(response.payload).not.toBeNull();
       });
     });
 
@@ -68,7 +75,10 @@ export const WishlistDeleteV1 = () => describe("Delete", () => {
     it("Should return no found", async () => {
       headers.Authorization = token;
 
-      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${mockAxiosResponse.data.id}`, headers }).then(response => {
+      await app.server.inject({ method: "DELETE", url: `/users/wishlist/${mockAxiosResponse.data.id}`,
+        headers
+      })
+      .then(response => {
         expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
         expect(response.payload).not.toBeNull();
       });

@@ -4,7 +4,7 @@ import { payload } from "ApiTests/Data/v1/Data";
 import { headers } from "ApiTests/Data/v1/Headers";
 
 export const UpdateByV1 = () => describe("UpdateBy", () => {
-  let app = new App;
+  const app = new App;
   let token: string;
 
   beforeAll(async () => {
@@ -21,16 +21,18 @@ export const UpdateByV1 = () => describe("UpdateBy", () => {
         expect(response.payload).not.toBeNull();
       });
 
-      await app.server.inject({ method: "PATCH", url: "/users/account", headers: { ApiKey: headers.ApiKey }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "PATCH", url: "/users/account",
+        headers: { ApiKey: headers.ApiKey }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
+          expect(response.payload).not.toBeNull();
       });
     });
 
     it("Should return unauthorized", async () => {
-      await app.server.inject({ method: "PATCH", url: "/users/account", headers: { ApiVersion: headers.ApiVersion }}).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "PATCH", url: "/users/account",
+        headers: { ApiVersion: headers.ApiVersion }}).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.UNAUTHORIZED);
+          expect(response.payload).not.toBeNull();
       });
     });
 
@@ -44,14 +46,16 @@ export const UpdateByV1 = () => describe("UpdateBy", () => {
     it("Should return bad request", async () => {
       headers.Authorization = token;
 
-      await app.server.inject({ method: "PATCH", url: "/users/account", headers, payload: { ...payload, name: null } }).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.BAD_REQUEST);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "PATCH", url: "/users/account",
+        headers, payload: { ...payload, name: null } }).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.BAD_REQUEST);
+          expect(response.payload).not.toBeNull();
       });
 
-      await app.server.inject({ method: "PATCH", url: "/users/account", headers, payload: { ...payload, email: null } }).then(response => {
-        expect(response.statusCode).toEqual(HttpStatus.BAD_REQUEST);
-        expect(response.payload).not.toBeNull();
+      await app.server.inject({ method: "PATCH", url: "/users/account",
+        headers, payload: { ...payload, email: null } }).then(response => {
+          expect(response.statusCode).toEqual(HttpStatus.BAD_REQUEST);
+          expect(response.payload).not.toBeNull();
       });
     });
 

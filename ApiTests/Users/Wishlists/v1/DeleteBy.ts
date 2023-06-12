@@ -66,7 +66,7 @@ export const WishlistDeleteV1 = () => describe("Delete", () => {
     });
 
     it("Should return no found", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       await app.server.inject({ method: "DELETE", url: `/users/wishlist/${mockAxiosResponse.data.id}`, headers }).then(response => {
         expect(response.statusCode).toEqual(HttpStatus.NOT_FOUND);
@@ -83,7 +83,7 @@ export const WishlistDeleteV1 = () => describe("Delete", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

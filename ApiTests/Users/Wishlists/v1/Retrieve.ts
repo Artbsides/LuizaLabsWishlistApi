@@ -63,7 +63,7 @@ export const WishlistRetrieveV1 = () => describe("Retrieve", () => {
     });
 
     it("Should return ok", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       await app.server.inject({ method: "GET", url: "/users/wishlist", headers }).then(response => {
         expect(response.statusCode).toEqual(HttpStatus.OK);
@@ -78,7 +78,7 @@ export const WishlistRetrieveV1 = () => describe("Retrieve", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

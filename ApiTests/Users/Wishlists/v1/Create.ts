@@ -58,7 +58,7 @@ export const WishlistCreateV1 = () => describe("Create", () => {
     });
 
     it("Should return not found", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       jest.spyOn(httpService, "get")
         .mockImplementationOnce(() => throwError(() => { return { ...requests.error, response: { status: HttpStatus.NOT_FOUND } }}));
@@ -107,7 +107,7 @@ export const WishlistCreateV1 = () => describe("Create", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

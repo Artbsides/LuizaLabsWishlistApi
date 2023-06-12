@@ -42,7 +42,7 @@ export const RetrieveByV1 = () => describe("RetrieveBy", () => {
     });
 
     it("Should return ok", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       await app.server.inject({ method: "GET", url: "/users/account", headers }).then(response => {
         expect(response.statusCode).toEqual(HttpStatus.OK);
@@ -52,7 +52,7 @@ export const RetrieveByV1 = () => describe("RetrieveBy", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

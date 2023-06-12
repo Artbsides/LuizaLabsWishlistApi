@@ -42,7 +42,7 @@ export const UpdateByV1 = () => describe("UpdateBy", () => {
     });
 
     it("Should return bad request", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       await app.server.inject({ method: "PATCH", url: "/users/account", headers, payload: { ...payload, name: null } }).then(response => {
         expect(response.statusCode).toEqual(HttpStatus.BAD_REQUEST);
@@ -64,7 +64,7 @@ export const UpdateByV1 = () => describe("UpdateBy", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

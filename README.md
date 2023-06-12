@@ -96,6 +96,10 @@ Assim como a autorização fornece certo nível de segurança ao acesso da aplic
 
 Certifique-se de atribuir valor à variável de ambiente `JWT_SECRET` para que a aplicação possa gerar os tokens de acesso para usuários que realizarem login. Neste caso também não há formato definido, porém, em ambos os casos recomenda-se a utilização de hashes de 32 bits ou semelhantes.
 
+Com exceção das requests feitas para as urls dos produtos, assim como também, para a url de criação e login de usuários, todas as demais requests feitas para esta aplicação necessitam do header `Authorization`.
+
+* As requests feitas para o cadastro, login e atualização de usuários retornam o header `access-token` contendo o token necessário no header descrito acima.
+
 # Workflows
 
 Foram implementadas actions que são executadas em diferentes cenários com o objetivo de aplicar testes e análise de código, assim como também o deploy da aplicação.
@@ -104,10 +108,24 @@ Para que as actions relacionadas aos testes e análise de código sejam executad
 
 Quanto ao deploy, esta action utiliza workflows compartihados e assim como as variáveis de ambiente encriptadas e demais recursos de deploy, é necessário estar alinhado com o ambiente de infra, porém, a nível de explicação, para execução da action, basta criar tags em formato preestabelecido e o processo inicializará automaticamente.
 
+# Documentação
+
+Esta aplicações possui todas as rotas e os detalhes mais importantes exemplificados em documentação gerada pelo postman. Os arquivos da documentação estão no diretório `.docs`, assim como também, é navegável acessando a url abaixo:
+
+```
+https://documenter.getpostman.com/view/4274276/2s93sc6DX5#intro
+```
+
+Há também uma documentação parcial gerada pelo swagger que está acessível em ambiente de desenvolvimento através da url abaixo:
+
+```
+http://localhost:3000/docs
+```
+
 # Melhorias Necessárias
 
 * Integração com ferramentas de log e monitoramento, tais como: Sentry, Prometheus e Grafana
-* Implementação de testes de forma mais elaborada levando em consideração outros cenários
+* Implementação de testes e documentação de forma mais elaborada levando em consideração outros cenários
 * Configuração e aplicação de linter a fim de satisfazer os padrões do projeto
 * Migrar armazenamento em memória para banco de dados
 * Incrementar documentação do swagger
@@ -118,5 +136,6 @@ Quanto ao deploy, esta action utiliza workflows compartihados e assim como as va
 * [ClassValidator](https://github.com/typestack/class-validator)
 * [ClassTransformer](https://github.com/typestack/class-transformer)
 * [Swagger](https://swagger.io)
+* [Postman](https://www.postman.com)
 * [JestJs](https://jestjs.io/pt-BR/)
 * [Faker](https://github.com/faker-js/faker)

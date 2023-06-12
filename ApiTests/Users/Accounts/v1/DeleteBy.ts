@@ -42,7 +42,7 @@ export const DeleteByV1 = () => describe("DeleteBy", () => {
     });
 
     it("Should return no content", async () => {
-      headers.authorization = token;
+      headers.Authorization = token;
 
       await app.server.inject({ method: "DELETE", url: "/users/account", headers }).then(response => {
         expect(response.statusCode).toEqual(HttpStatus.NO_CONTENT);
@@ -52,7 +52,7 @@ export const DeleteByV1 = () => describe("DeleteBy", () => {
   });
 
   afterAll(async () => {
-    headers.authorization = null;
+    headers.Authorization = null;
 
     await app.server
       .close();

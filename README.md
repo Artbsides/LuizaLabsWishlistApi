@@ -110,7 +110,7 @@ Quanto ao deploy, esta action utiliza workflows compartihados e assim como as va
 
 # Documentação
 
-Esta aplicações possui todas as rotas e os detalhes mais importantes exemplificados em documentação gerada pelo postman. Os arquivos da documentação estão no diretório `.docs`, assim como também, é navegável acessando a url abaixo:
+Esta aplicação possui todas as rotas e os detalhes mais importantes exemplificados em documentação gerada pelo postman. Os arquivos da documentação estão no diretório `.docs`, assim como também, é navegável acessando a url abaixo:
 
 ```
 https://documenter.getpostman.com/view/4274276/2s93sc6DX5#intro

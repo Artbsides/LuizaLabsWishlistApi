@@ -12,12 +12,14 @@ import { ApiKeyAuthGuard, ApiKeyStrategy } from "./Confs/Authorization";
       isGlobal: true,
       expandVariables: true
     }),
-    JwtModule.register({
+    JwtModule.registerAsync({
       global: true,
-      secret: process.env.JWT_SECRET,
-      signOptions: {
-        expiresIn: "1h"
-      }
+      useFactory: () => ({
+        secret: process.env.JWT_SECRET,
+        signOptions: {
+          expiresIn: "1h"
+        }
+      })
     }),
     UsersRouter,
     StoresRouter

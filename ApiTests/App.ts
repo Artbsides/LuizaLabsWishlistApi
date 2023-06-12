@@ -4,9 +4,18 @@ import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify
 import { Test, TestingModule } from "@nestjs/testing";
 import { AppModule } from "Api/AppModule";
 import { ExceptionsHandler } from "Api/Exceptions/ExceptionsHandler";
+import { headers } from "./Data/v1/Headers";
+import { randomUUID } from "crypto";
 
 export class App {
   server: NestFastifyApplication;
+
+  constructor() {
+    process.env.API_KEYS = randomUUID();
+    process.env.JWT_SECRET = randomUUID();
+
+    headers.ApiKey = process.env.API_KEYS;
+  }
 
   async create(): Promise<TestingModule> {
     const module: TestingModule = await Test.createTestingModule({

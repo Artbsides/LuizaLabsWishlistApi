@@ -1,4 +1,4 @@
 export const headers: Record<string, any> = {
-  ApiKey: process.env.API_KEYS?.split(",")[Math.round(Math.random())] as string,
+  ApiKey: undefined,
   ApiVersion: "1"
 };

@@ -6,8 +6,6 @@ services:
     command: ${COMPOSE_DEVELOPMENT_COMMAND:-}
     build:
       target: development
-    environment:
-      NODE_ENV: ${NODE_ENV}
     ports:
       - ${NODE_PORT}:${NODE_PORT}
       - ${NODE_PORT_DEBUG}:${NODE_PORT_DEBUG}

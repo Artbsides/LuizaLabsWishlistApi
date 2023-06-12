@@ -90,7 +90,7 @@ delete-tag:  ## Delete github tag. action=create|delete tag=[0-9].[0-9].[0-9]|[0
 
 start:  ## Run api. mode=dev|debug|prod
 ifeq ("$(mode)", "prod")
-	@docker-compose up wishlist-api
+	@NODE_ENV="production" docker-compose up wishlist-api
 else ifneq ($(filter "$(mode)", "dev" "debug"),)
 	@COMPOSE_DEVELOPMENT_COMMAND="npm run start:$(mode)" \
 		docker-compose -f compose.yml -f compose.development.yml up wishlist-api
